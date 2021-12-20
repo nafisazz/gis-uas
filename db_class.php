@@ -20,9 +20,10 @@ class Db_Class
         $lng = $_POST['lng'];
         $id = $_POST['id'];
         $nama = $_POST['nama'];
+        $jenis = $_POST['jenis'];
         $alamat = $_POST['alamat'];
 
-        $sql = "insert into hotel (id, nama, alamat, lat, lng, geom) VALUES ('$id', '$nama', '$alamat', '$lat', '$lng', ST_GeomFromText('POINT($lng $lat)', 4326))";
+        $sql = "insert into hotel (id, nama, jenis, alamat, lat, lng, geom) VALUES ('$id', '$nama', '$jenis', '$alamat', '$lat', '$lng', ST_GeomFromText('POINT($lng $lat)', 4326))";
         return pg_affected_rows(pg_query($sql));
     }
 
@@ -57,7 +58,7 @@ class Db_Class
         $lat = $_POST['lat'];
         $lng = $_POST['lng'];
 
-        $sql = "update hotel set id='" . $this->cleanData($_POST['id']) . "',nama='" . $this->cleanData($_POST['nama']) . "', alamat='" . $this->cleanData($_POST['alamat']) . "', lat='" . $this->cleanData($_POST['lat']) . "', lng='" . $this->cleanData($_POST['lng']) . "' ,geom= ST_GeomFromText('POINT($lng $lat)', 4326)  where id = '" . $this->cleanData($_POST['id']) . "' ";
+        $sql = "update hotel set id='" . $this->cleanData($_POST['id']) . "',nama='" . $this->cleanData($_POST['nama']) . "', jenis='" . $this->cleanData($_POST['jenis']) . "', lat='" . $this->cleanData($_POST['lat']) . "', lng='" . $this->cleanData($_POST['lng']) . "' ,geom= ST_GeomFromText('POINT($lng $lat)', 4326)  where id = '" . $this->cleanData($_POST['id']) . "' ";
         return pg_affected_rows(pg_query($sql));
     }
     function cleanData($val)

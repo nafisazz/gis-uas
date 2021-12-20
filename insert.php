@@ -46,6 +46,13 @@ if (isset($_POST['submit']) and !empty($_POST['submit'])) {
                         </div>
 
                         <div class="form-group">
+                           <label class="control-label col-sm-2 mt-2">Jenis:<span style='color:red'>*</span></label>
+                           <div class="col-sm-5 mt-2">
+                              <input class="form-control" type="text" name="jenis" required>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
                            <label class="control-label col-sm-2 mt-2">Alamat Hotel:<span style='color:red'>*</span></label>
                            <div class="col-sm-5 mt-2">
                               <input class="form-control" type="text" name="alamat" required>
