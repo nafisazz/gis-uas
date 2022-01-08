@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
 
 <body>
     <div class="map">
-        <object data="" type=""></object>
+        <object data="http://localhost:8090/geoserver/Lampung/wms?service=WMS&version=1.1.0&request=GetMap&layers=Lampung:Group%20Peta%20Lampung&styles=&bbox=105.14678955078125,-5.54346227645874,105.3501205444336,-5.324850082397461&width=714&height=768&srs=EPSG:4326&format=application/openlayers " width="1000" height="900" type=""></object>
     </div>
 </body>
 
